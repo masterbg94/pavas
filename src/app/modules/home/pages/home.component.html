@@ -1,0 +1,176 @@
+<div class="slider" style="position: relative;">
+  <carousel>
+    <slide>
+      <div class="first">
+        <div class="first-text">
+          <div class="blocks">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+             <span>BRZO I EFIKASNO</span>
+            </div>
+            <div class="block2"></div>
+          </div>
+          <div class="blocks2">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>GRADIMO KUCE PO VASOJ ZELjI</span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              Montažne kuće Pavas su drugačije:</p>
+            <p>Inovativne</p>
+            <p>Slede savremene obrasce življenja</p>
+            <p>Kuće su individualno dizajnirane i projektovana u skladu sa zahtevima
+              korisnika</p>
+          </div>
+          <button mat-button>NAŠE REFERENCE</button>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div class="third">
+        <div class="third-text">
+          <div class="blocks">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>TEHNOLOGIJE</span>
+            </div>
+            <div class="block2"></div>
+          </div>
+          <div class="blocks2">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>TEHNOLOGIJE KOJE KORISTIMO</span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              Firma Pavas ima usavršenu tehnologiju proizvodnje montažnih objekata.
+              Svaki korak proizvodnje je posebno razrađen I praćen od strane našeg
+              stručnom tima. Početak svake montažne kuće je izbor
+              kvalitetne građe. Zahvaljujući sopstvenim kapacitetima...
+            </p>
+          </div>
+          <button mat-button style="width: 300px">TEHNOLOGIJE I SISTEMI GRADNJE</button>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div class="second">
+        <div class="second-text">
+          <div class="blocks">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>MOZETE NAS KONTAKTIRATI</span>
+            </div>
+            <div class="block2"></div>
+          </div>
+          <div class="blocks2">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>UVEK I U SVAKOM TRENUTKU</span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+               Naš tim podrške će se potruditi
+              da vam stoji na raspolaganju uvek i usvakom trenutku,
+              odgovarajući na vaša pitanja brzo i efikasno i pomažući vam da otklonite neke od vaših nedoumica.
+            </p>
+          </div>
+          <button mat-button>KONTAKT</button>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</div>
+<div class="ribbon">
+  <div class="ribbon-text">
+    <div class="text">
+      <span style="font-weight: 500">ZELITE DA SE KONSULTUJETE SA NAMA?</span>
+      <span style="font-weight: 300">NAS STRUCNI TIM VAM STOJI NA RASPOLAGANjU…</span>
+    </div>
+    <button mat-raised-button="">KONTAKTIRAJTE NAS</button>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="content">
+    <div class="title">
+      <h3>U KORAK SA EVROPSKIM STANDARDIMA</h3>
+      <h1>KLjUC U RUKE <span>ZA SVEGA PAR NEDELjA</span></h1>
+      <p>
+        U zavisnosti od zahteva tržišta za koje gradimo, a uz naše iskustvo i znanje Vaš dom
+        može biti gotov za svega par nedelja od dana potpisivanja ugovora.
+      </p>
+    </div>
+    <div class="containers">
+      <div class="container" routerLink="/tehnology">
+        <img src="../../../../assets/images/home-images/tehnologija.png">
+        <button mat-button>TEHNOLOGIJA</button>
+      </div>
+      <div class="container" routerLink="/aboutus">
+        <img src="../../../../assets/images/home-images/tehnology.png">
+        <button mat-button>O NAMA</button>
+      </div>
+      <div class="container" routerLink="/gallery">
+        <img src="../../../../assets/images/home-images/galerija.png">
+        <button mat-button>GALERIJA</button>
+      </div>
+    </div>
+    <div class="map-content">
+      <div class="map">
+        <img src="../../../../assets/images/home-images/map.png">
+      </div>
+      <div class="text-container">
+        <h3>MI SMO SVUDA OKO VAS</h3>
+        <h1>DO SADA SMO IZGRADILI</h1>
+        <h1 style="color: #FFC200">DOBAR DEO EVROPE</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna
+          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+          duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <button mat-raised-button>PREUZMITE KATALOG</button>
+      </div>
+    </div>
+    <div class="title">
+      <h3>POSLUJEMO NA OBOSTRANO ZADOVOLjSTVO</h3>
+      <h1>STO MOGU <span>POTVRDITI I NASI KLIJENTI</span></h1>
+    </div>
+  </div>
+      <div class="comments" style="padding: 60px 0">
+        <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex="auto" style="height: 100px">
+          <swiper *ngIf="type == 'component' && show" class="swiper-container" [config]="config" (indexChange)="onIndexChange($event)" fxFlex="auto">
+            <div *ngFor="let slide of slides;let i = index;" class="swiper-slide">
+              <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+                <div class="comment">
+                  <div class="image">
+                    <img [src]="'../../../../assets/images/profile/' + slide.image">
+                  </div>
+                  <div class="text">
+                    {{slide.text}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </swiper>
+          <div *ngIf="type == 'directive' && show" class="swiper-container" [swiper]="config" (indexChange)="onIndexChange($event)">
+            <div class="swiper-wrapper">
+              <div *ngFor="let slide of slides" class="swiper-slide">
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+                </div>
+              </div>
+            </div>
+            <div class="next" style="width: 50px;height: 50px;background: black">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-cover"></div>
+        <div class="book-cover2"></div>
+      </div>
+ </div>

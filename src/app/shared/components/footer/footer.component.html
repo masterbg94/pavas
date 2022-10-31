@@ -1,0 +1,74 @@
+<div class="wrapper">
+  <div class="ribbon">
+    <img style="position: absolute" src="../../../../assets/images/footer/footer-ribbon.png">
+  </div>
+  <div class="content">
+    <div class="footer-left">
+      <ul class="agent">
+        <h3>Kompanija Pavas</h3>
+        <li *ngFor="let menu of agentMenu" [routerLink]="menu.router">
+          {{menu.name}}
+        </li>
+      </ul>
+      <ul class="nekretnine">
+        <h3>Socijalne Mreze</h3>
+        <li *ngFor="let menu of nekretnine" [routerLink]="menu.router">
+          {{menu.name}}
+        </li>
+      </ul>
+      <ul class="linkovi">
+        <h3>Korisni Linkovi</h3>
+        <li *ngFor="let menu of linkovi" [routerLink]="menu.router">
+          {{menu.name}}
+        </li>
+      </ul>
+      <div class="contact">
+        <h3>Kontakt</h3>
+        <div class="info">
+          <p>
+            Telefon: 381 32 64 17 92
+          </p>
+          <p>
+            Mobilni: 381 65 85 66 417
+          </p>
+          <p>
+            Email: info@pavas.com
+          </p>
+        </div>
+        <div class="address">
+          <p>
+            Sadjavac bb
+          </p>
+          <p>
+            32250 Ivanjica
+          </p>
+          <p>
+            Srbija
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="encription">
+        <div class="time">
+          <h3>Radno Vreme</h3>
+          <div class="info">
+            <p>
+              Radnim danima: 08-20h
+            </p>
+            <p>
+              Subota: 8-17h
+            </p>
+        </div>
+        </div>
+        <img src="../../../../assets/images/footer/ssl-encrypted.png" alt="ssl-encrypted.png">
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <div class="content">
+      <span>Pavas D.O.O © 2018 Sva prava zasticena</span>
+      <span>Powered by Limit Consolidated</span>
+    </div>
+  </div>
+</div>

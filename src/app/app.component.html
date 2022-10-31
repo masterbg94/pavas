@@ -1,0 +1,67 @@
+
+<div class="div" *ngIf="innerWidth > 1024">
+<app-navigation-menu></app-navigation-menu>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+</div>
+
+<mat-drawer-container class="main-container" *ngIf="innerWidth < 1025 " style="height: 100%">
+  <mat-drawer #drawer class="side-menu" [opened]="!isOpen" style="padding: 0" [mode]="over" cdk-scrollable="false">
+    <mat-nav-list>
+      <div class="listnav">
+        <div class="start">
+          Pavas Menu
+        </div>
+        <div class="page" *ngFor="let m of menu"
+             routerLink="{{m.router}}"
+             [routerLinkActive]="['active']"
+             [routerLinkActiveOptions]="{exact:true}"
+             (click)="drawer.toggle()"
+        >
+          <span><i class="{{m.icon}}"></i> {{m.name}}</span>
+        </div>
+      </div>
+    </mat-nav-list>
+
+    <div class="copyright">
+      <div class="social">
+        <div class="circle f">
+          <i class="fab fa-facebook-f"></i>
+        </div>
+
+        <div class="circle t">
+          <i class="fab fa-twitter"></i>
+        </div>
+
+        <div class="circle g">
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+      </div>
+      <div class="copy">Copyright by Pavas D.O.O 2019</div>
+      <div class="copy" style="padding-bottom: 20px">Powered By Limit Consolidated</div>
+    </div>
+  </mat-drawer>
+
+  <mat-toolbar id="brand">
+    <a class="navbar-brand"
+       [routerLink]="['/']"
+       (click)="navbarCollapsed = false"
+    >
+      <div class="logo">
+        <img src="../assets/images/logo/pavaslogo.png">
+      </div>
+    </a>
+    <button mat-icon-button (click)="drawer.toggle()" style="display: flex;outline: none">
+      <mat-icon>reorder</mat-icon>
+      <p>{{name}}</p>
+    </button>
+  </mat-toolbar>
+
+  <div class="content" style="padding-top: 100px">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</mat-drawer-container>
+
+
+

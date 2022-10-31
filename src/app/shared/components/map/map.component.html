@@ -1,0 +1,22 @@
+<agm-map [scrollwheel]=false style="width: 100%;height: 100%"
+         [styles]="customStyle"
+         [latitude]="lat"
+         [longitude]="lng"
+         [zoom]="zoom"
+         [disableDefaultUI]="false"
+         [zoomControl]="false">
+  <agm-marker [iconUrl]="'../../../../assets/images/marker.png'"
+              [latitude]="lat"
+              [longitude]="lng">
+    <agm-info-window>
+      <strong style="text-align: center">
+        Sadjavac bb<br>
+        32250 Ivanjica<br>
+        Srbija
+      </strong>
+    </agm-info-window>
+  </agm-marker>
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng"
+              [circleDraggable]="true">
+  </agm-circle>
+</agm-map>

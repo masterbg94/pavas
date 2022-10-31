@@ -1,0 +1,136 @@
+<div class="wrapper">
+  <div class="info"></div>
+  <div class="content"></div>
+</div>
+<div class="wrapper-content">
+  <div class="content">
+    <mat-tab-group>
+      <mat-tab label="TEHNOLOGIJA I SISTEMI SA PRESECIMA ZIDOVA">
+        <div class="tehnology">
+          <div class="left">
+            <h3 style="padding-bottom: 20px">
+              TEHNOLOGIJE I SISTEMI GRADNJE
+            </h3>
+            <p style="padding-right: 20px">
+              Firma Dom doo ima usavršenu tehnologiju proizvodnje montažnih objekata.
+              Svaki  korak proizvodnje je posebno razrađen I praćen od strane našeg stručnom tima.
+              Početak svake montažne kuće je izbor kvalitetne građe.<br><br>
+              Zahvaljujući sopstvenim kapacitetima,
+              našim proverenim dobavljačima  I sušarama za sušenje građe imamo odlican uvid u kvalitet
+              I vlažnost (suvocu) građe koju koristimo.<br><br>
+              Posle sušenja drveta, u proizvodnom delu naše
+              firme vrši se dalja obrada drveta sve prema potrebnim merama I specifikaciji matarijala za
+              Vaš dom.<br><br>
+              Posle sklapanja I izrade u proizvodnji elementi se transportuju do gradilišta
+              I počinje se sa montažom objekta.
+              Nakon završene montaže vrše se svi ostali radovi potrebni na objektu.<br><br>
+              Ono čime se posebno ponosimo je to sto je firma Dom doo direktan proizvođac
+              montažnih objekata sa sopstvenim magacinskim I proizvodnim kapacitetima. Sa konstantnim lagerom od preko 100m³ kvalitetne suve čamove građe I ostalim materijalima garantujemo da Vašu kuću možemo početi u najkraćem mogućem roku.
+
+            </p>
+          </div>
+          <div class="right">
+            <h3>PRESECI ZIDOVA</h3>
+            <mat-tab-group>
+              <mat-tab label="Klasik">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>Fasada</h4>
+                <ul>
+                  <li *ngFor="let name of klasik">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>Ukupna debljina: 237.5 mm</h5>
+                <p>
+                  Svi elementi zidova se mogu korigovati prema mogućnostima, željama I zahtevima investitora.
+                </p>
+              </mat-tab>
+              <mat-tab label="Premuim">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>Fasada</h4>
+                <ul>
+                  <li *ngFor="let name of premium">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>Ukupna debljina: 307.5 mm</h5>
+                <p>
+                  Svi elementi zidova se mogu korigovati prema mogućnostima, željama I zahtevima investitora.
+                </p>
+              </mat-tab>
+              <mat-tab label="Modern">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>Fasada</h4>
+                <ul>
+                  <li *ngFor="let name of modern">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>Ukupna debljina: 381.5 mm</h5>
+                <p>
+                  Svi elementi zidova se mogu korigovati prema mogućnostima, željama I zahtevima investitora.
+                </p>
+              </mat-tab>
+              <mat-tab label="Pasiv">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>Silikatna Fasada</h4>
+                <ul>
+                  <li *ngFor="let name of modern">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>Ukupna debljina: 459.5 mm</h5>
+                <p>
+                  Svi elementi zidova se mogu korigovati prema mogućnostima, željama I zahtevima investitora.
+                </p>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+      </mat-tab>
+      <!--<mat-tab label="UKLJUČENO U PONUDU SIVA GRADNJA I KLJUČ U RUKE">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          &lt;!&ndash;- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" &ndash;&gt;
+
+          &lt;!&ndash; Position Column &ndash;&gt;
+          <ng-container matColumnDef="number">
+            <th mat-header-cell *matHeaderCellDef> Broj. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+
+          &lt;!&ndash; Name Column &ndash;&gt;
+          <ng-container matColumnDef="fase">
+            <th mat-header-cell *matHeaderCellDef> Faza izrade </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          &lt;!&ndash; Weight Column &ndash;&gt;
+          <ng-container matColumnDef="gray">
+            <th mat-header-cell *matHeaderCellDef> Uključeno u ponudu siva faza </th>
+            <td mat-cell *matCellDef="let element"> <i class="{{element.correct}}"></i> </td>
+          </ng-container>
+
+          &lt;!&ndash; Symbol Column &ndash;&gt;
+          <ng-container matColumnDef="key">
+            <th mat-header-cell *matHeaderCellDef> Uključeno u ponudu ključ u ruke </th>
+            <td mat-cell *matCellDef="let element"> <i class="{{element.incorrect}}"></i>  </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <div class="alert">
+          <p>VARIJANTA 1 SIVA FAZA bez unutrašnjih zanatskih radova temelja i ploče</p>
+          <p>VARIJANTA 2 KLJUĆ U RUKE bez temelja i ploče</p>
+          <p><span>NAPOMENA</span><i class="fas fa-times"></i> radovi i materijali koji se mogu naknadno ugovoriti!</p>
+        </div>
+      </mat-tab>-->
+    </mat-tab-group>
+  </div>
+</div>

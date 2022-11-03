@@ -481,7 +481,7 @@ carousel::ng-deep {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 0 40px;
+        padding: 0 40px 40px;
         h3{
           font-size: 14px;
           font-weight: 500;
@@ -717,7 +717,7 @@ swiper::ng-deep {
     }
   }
   .comment::ng-deep{
-    
+
   }
   .containers::ng-deep{
     .container{
@@ -795,7 +795,7 @@ swiper::ng-deep {
   .map-content{
     flex-direction: column;
     .text-container{
-      padding: 0 20px !important;
+      padding: 0 40px 40px !important;
       p {
         text-align: justify;
         max-width: 100% !important;
@@ -803,6 +803,10 @@ swiper::ng-deep {
       button{
         width: 100% !important;
       }
+    }
+    .map{
+      width: 100% !important;
+      overflow: hidden!important;
     }
   }
   .title{
@@ -837,7 +841,7 @@ swiper::ng-deep {
     flex-direction: column;
     .container{
       margin-bottom: 20px;
-      width: 300px !important;
+      width: 90% !important;
       height: auto !important;
       button{
         width: 100% !important;

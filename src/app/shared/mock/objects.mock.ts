@@ -1004,7 +1004,7 @@ export const OBJECTMOCK: ObjectsModel[] = [
   {
     id: 12,
     name: 'Dom 12',
-    mainImage: 'dom12/dom-12-1.jpg',
+    mainImage: 'DOM12/dom-12-1.jpg',
     rooms: 2,
     bathrooms: 1,
     area: 48.67,

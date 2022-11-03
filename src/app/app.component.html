@@ -10,7 +10,7 @@
     <mat-nav-list>
       <div class="listnav">
         <div class="start">
-          Pavas Menu
+          Dom Menu
         </div>
         <div class="page" *ngFor="let m of menu"
              routerLink="{{m.router}}"
@@ -37,7 +37,7 @@
           <i class="fab fa-google-plus-g"></i>
         </div>
       </div>
-      <div class="copy">Copyright by Pavas D.O.O 2019</div>
+      <div class="copy">Copyright by Dom D.O.O 2019</div>
       <div class="copy" style="padding-bottom: 20px">Powered By Limit Consolidated</div>
     </div>
   </mat-drawer>
@@ -51,7 +51,7 @@
         <img src="../assets/images/logo/pavaslogo.png">
       </div>
     </a>
-    <button mat-icon-button (click)="drawer.toggle()" style="display: flex;outline: none">
+    <button mat-icon-button (click)="drawer.toggle()" style="display: flex;outline: none;align-items: center">
       <mat-icon>reorder</mat-icon>
       <p>{{name}}</p>
     </button>

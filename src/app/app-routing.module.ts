@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: {title: 'Pavas Naslovna'},
+    data: {title: 'Dom Naslovna'},
   },
   {
     path: 'contact',

@@ -11,7 +11,7 @@ export class ServicesComponent implements OnInit{
     {
       title: 'Konsultacije pri dizajniranju projekta',
       icon: 'person_pin',
-      text: 'Firma „PAVAS“ vodi računa o željama i vizijama svojih klijenata.' +
+      text: 'Firma „Dom“ vodi računa o željama i vizijama svojih klijenata.' +
         ' U konsultaciji sa Vama naši projektanti će izraditi idejno rešenje prema Vašoj želji i ideji.',
     },
     {
@@ -34,7 +34,7 @@ export class ServicesComponent implements OnInit{
     {
       title: 'Garancija na izvrsene radove',
       icon: 'security',
-      text: 'Firma „PAVAS“ daje garancije na izvedene radove od dve godine prema zakonskom\n' +
+      text: 'Firma „Dom“ daje garancije na izvedene radove od dve godine prema zakonskom\n' +
         'roku. Garancija na konstrukciju objekta je 30 godina.'
     }
   ];

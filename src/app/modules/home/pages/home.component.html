@@ -6,25 +6,24 @@
           <div class="blocks">
             <div class="triangleBottomLeft"></div>
             <div class="block1">
-             <span>BRZO I EFIKASNO</span>
+             <span>{{'SLIDE.slide1-heading'|translate}}</span>
             </div>
             <div class="block2"></div>
           </div>
           <div class="blocks2">
             <div class="triangleBottomLeft"></div>
             <div class="block1">
-              <span>GRADIMO KUCE PO VASOJ ZELjI</span>
+              <span>{{'SLIDE.slide1-subheading'|translate}}</span>
             </div>
           </div>
           <div class="text">
-            <p>
-              Montažne kuće Dom su drugačije:</p>
-            <p>Inovativne</p>
-            <p>Slede savremene obrasce življenja</p>
-            <p>Kuće su individualno dizajnirane i projektovana u skladu sa zahtevima
-              korisnika</p>
+            <p [innerHTML]="'SLIDE.slide1-txt'|translate"></p>
+<!--            <p>Inovativne</p>-->
+<!--            <p>Slede savremene obrasce življenja</p>-->
+<!--            <p>Kuće su individualno dizajnirane i projektovana u skladu sa zahtevima-->
+<!--              korisnika</p>-->
           </div>
-          <button mat-button [routerLink]="'gallery'">NAŠE REFERENCE</button>
+          <button mat-button [routerLink]="'gallery'">{{'SLIDE.slide1-button'|translate}}</button>
         </div>
       </div>
     </slide>
@@ -34,25 +33,22 @@
           <div class="blocks">
             <div class="triangleBottomLeft"></div>
             <div class="block1">
-              <span>TEHNOLOGIJE</span>
+              <span>{{'SLIDE.slide2-heading'|translate}}</span>
             </div>
             <div class="block2"></div>
           </div>
           <div class="blocks2">
             <div class="triangleBottomLeft"></div>
             <div class="block1">
-              <span>TEHNOLOGIJE KOJE KORISTIMO</span>
+              <span>{{'SLIDE.slide2-subheading'|translate}}</span>
             </div>
           </div>
           <div class="text">
             <p>
-              Firma Dom ima usavršenu tehnologiju proizvodnje montažnih objekata.
-              Svaki korak proizvodnje je posebno razrađen I praćen od strane našeg
-              stručnom tima. Početak svake montažne kuće je izbor
-              kvalitetne građe. Zahvaljujući sopstvenim kapacitetima...
+              {{'SLIDE.slide2-txt'|translate}}
             </p>
           </div>
-          <button mat-button style="width: 300px" [routerLink]="'tehnology'">TEHNOLOGIJE I SISTEMI GRADNJE</button>
+          <button mat-button style="width: 300px" [routerLink]="'tehnology'">{{'SLIDE.slide2-button'|translate}}</button>
         </div>
       </div>
     </slide>
@@ -62,24 +58,22 @@
           <div class="blocks">
             <div class="triangleBottomLeft"></div>
             <div class="block1">
-              <span>MOZETE NAS KONTAKTIRATI</span>
+              <span>{{'SLIDE.slide3-heading'|translate}}</span>
             </div>
             <div class="block2"></div>
           </div>
           <div class="blocks2">
             <div class="triangleBottomLeft"></div>
             <div class="block1">
-              <span>UVEK I U SVAKOM TRENUTKU</span>
+              <span>{{'SLIDE.slide3-subheading'|translate}}</span>
             </div>
           </div>
           <div class="text">
             <p>
-               Naš tim podrške će se potruditi
-              da vam stoji na raspolaganju uvek i usvakom trenutku,
-              odgovarajući na vaša pitanja brzo i efikasno i pomažući vam da otklonite neke od vaših nedoumica.
+              {{'SLIDE.slide3-txt'|translate}}
             </p>
           </div>
-          <button mat-button [routerLink]="'contact'">KONTAKT</button>
+          <button mat-button [routerLink]="'contact'">{{'SLIDE.slide3-button'|translate}}</button>
         </div>
       </div>
     </slide>
@@ -88,34 +82,33 @@
 <div class="ribbon">
   <div class="ribbon-text">
     <div class="text">
-      <span style="font-weight: 500">ZELITE DA SE KONSULTUJETE SA NAMA?</span>
-      <span style="font-weight: 300">NAS STRUCNI TIM VAM STOJI NA RASPOLAGANjU…</span>
+      <span style="font-weight: 500">{{'ribbon-heading' | translate}}</span>
+      <span style="font-weight: 300">{{'ribbon-subheading' | translate}}</span>
     </div>
-    <button mat-raised-button="">KONTAKTIRAJTE NAS</button>
+    <button mat-raised-button="" [routerLink]="'/contact'">{{'ribbon-button' | translate}}</button>
   </div>
 </div>
 <div class="wrapper">
   <div class="content">
     <div class="title">
-      <h3>U KORAK SA EVROPSKIM STANDARDIMA</h3>
-      <h1>KLjUC U RUKE <span>ZA SVEGA PAR NEDELjA</span></h1>
+      <h3>{{'HOME-SERVICES.service-heading'|translate}}</h3>
+      <h1>{{'HOME-SERVICES.service-subheading'|translate}}<span>{{'HOME-SERVICES.service-subheading1'|translate}}</span></h1>
       <p>
-        U zavisnosti od zahteva tržišta za koje gradimo, a uz naše iskustvo i znanje Vaš dom
-        može biti gotov za svega par nedelja od dana potpisivanja ugovora.
+        {{'HOME-SERVICES.service-txt'|translate}}
       </p>
     </div>
     <div class="containers">
       <div class="container" routerLink="/tehnology">
         <img src="../../../../assets/images/home-images/tehnologija.png">
-        <button mat-button>TEHNOLOGIJA</button>
+        <button mat-button>{{'technology'|translate|uppercase}}</button>
       </div>
       <div class="container" routerLink="/aboutus">
         <img src="../../../../assets/images/home-images/tehnology.png">
-        <button mat-button>O NAMA</button>
+        <button mat-button>{{'MENU.aboutus'|translate|uppercase}}</button>
       </div>
       <div class="container" routerLink="/gallery">
         <img src="../../../../assets/images/home-images/galerija.png">
-        <button mat-button>GALERIJA</button>
+        <button mat-button>{{'MENU.gallery'|translate|uppercase}}</button>
       </div>
     </div>
     <div class="map-content">
@@ -123,17 +116,13 @@
         <img src="../../../../assets/images/home-images/map.png">
       </div>
       <div class="text-container">
-        <h3>MI SMO SVUDA OKO VAS</h3>
-        <h1>DO SADA SMO IZGRADILI</h1>
-        <h1 style="color: #FFC200">DOBAR DEO EVROPE</h1>
+        <h3>{{'map-txt1'|translate}}</h3>
+        <h1>{{'map-txt2'|translate}}</h1>
+        <h1 style="color: #FFC200">{{'map-txt3'|translate}}</h1>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna
-          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-          duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.
+          {{'map-txt4'|translate}}
         </p>
-        <button mat-raised-button>PREUZMITE KATALOG</button>
+        <button mat-raised-button>{{'map-button'|translate}}</button>
       </div>
     </div>
     <!--<div class="title">

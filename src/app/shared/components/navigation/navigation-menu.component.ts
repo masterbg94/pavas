@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -9,63 +10,69 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationMenuComponent implements OnInit {
   public navbarCollapsed: boolean;
   menu = [
-	{
-		name: 'NASLOVNA',
-		router: '',
-	},
-	{
-		name: 'O NAMA',
-		router: 'aboutus',
-	},
-	{
-		name: 'USLUGE',
-		router: 'services',
-	},
-  {
-    name: 'TIPSKI OBJEKTI',
-    router: 'objects',
-  },
-  {
-    name: 'DODATNI PROIZVODI',
-    router: 'products',
-  },
-	{
-		name: 'GALERIJA',
-		router: 'gallery',
-	},
-	{
-    name: 'TEHNOLOGIJE I SISTEMI GRADNJE',
-    router: 'tehnology',
-	},
     {
-      name: 'KONTAKT',
+      name: 'MENU.home',
+      router: '',
+    },
+    {
+      name: 'MENU.aboutus',
+      router: 'aboutus',
+    },
+    {
+      name: 'MENU.services',
+      router: 'services',
+    },
+    {
+      name: 'MENU.objects',
+      router: 'objects',
+    },
+    {
+      name: 'MENU.products',
+      router: 'products',
+    },
+    {
+      name: 'MENU.gallery',
+      router: 'gallery',
+    },
+    {
+      name: 'MENU.technology',
+      router: 'tehnology',
+    },
+    {
+      name: 'MENU.contact',
       router: 'contact',
     },
   ];
   public availableLanguages: any[] = [
     {
-      label: 'Serbian',
+      label: 'serbian',
       code: 'rs-RS',
+      value: 'sr',
       flag: '../../../../assets/images/serbian.png'
     },
+    // {
+    //   label: 'Slovenian',
+    //   code: 'sl-SL',
+    //   value: 'sl',
+    //   flag: '../../../../assets/images/slovenian.png'
+    // },
     {
-      label: 'Slovenian',
-      code: 'sl-SL',
-      flag: '../../../../assets/images/slovenian.png'
-    },
-    {
-      label: 'English',
+      label: 'english',
       code: 'en-US',
+      value: 'en',
       flag: '../../../../assets/images/usflag.png'
     },
-    {
-      label: 'Deutsch',
-      code: 'de-DE',
-      flag: '../../../../assets/images/germanflag.png'
-    }
+    // {
+    //   label: 'Deutsch',
+    //   code: 'de-DE',
+    //   value: 'de',
+    //   flag: '../../../../assets/images/germanflag.png'
+    // }
   ];
   currentLanguage = this.availableLanguages[0];
 
+  constructor(private translateService: TranslateService) {
+  }
   public ngOnInit(): void {
     let prevScrollpos = window.pageYOffset;
 
@@ -88,5 +95,6 @@ export class NavigationMenuComponent implements OnInit {
 
   public setLanguage(language: any) {
     this.currentLanguage = language;
+    this.translateService.use(language.value);
   }
 }

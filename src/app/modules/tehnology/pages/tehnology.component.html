@@ -5,32 +5,18 @@
 <div class="wrapper-content">
   <div class="content">
     <mat-tab-group>
-      <mat-tab label="TEHNOLOGIJA I SISTEMI SA PRESECIMA ZIDOVA">
+      <mat-tab [label]="'TECH.tab1'|translate">
         <div class="tehnology">
           <div class="left">
             <h3 style="padding-bottom: 20px">
-              TEHNOLOGIJE I SISTEMI GRADNJE
+              {{'MENU.technology'|translate|uppercase}}
             </h3>
-            <p style="padding-right: 20px">
-              Firma Dom doo ima usavršenu tehnologiju proizvodnje montažnih objekata.
-              Svaki  korak proizvodnje je posebno razrađen I praćen od strane našeg stručnom tima.
-              Početak svake montažne kuće je izbor kvalitetne građe.<br><br>
-              Zahvaljujući sopstvenim kapacitetima,
-              našim proverenim dobavljačima  I sušarama za sušenje građe imamo odlican uvid u kvalitet
-              I vlažnost (suvocu) građe koju koristimo.<br><br>
-              Posle sušenja drveta, u proizvodnom delu naše
-              firme vrši se dalja obrada drveta sve prema potrebnim merama I specifikaciji matarijala za
-              Vaš dom.<br><br>
-              Posle sklapanja I izrade u proizvodnji elementi se transportuju do gradilišta
-              I počinje se sa montažom objekta.
-              Nakon završene montaže vrše se svi ostali radovi potrebni na objektu.<br><br>
-              Ono čime se posebno ponosimo je to sto je firma Dom doo direktan proizvođac
-              montažnih objekata sa sopstvenim magacinskim I proizvodnim kapacitetima. Sa konstantnim lagerom od preko 100m³ kvalitetne suve čamove građe I ostalim materijalima garantujemo da Vašu kuću možemo početi u najkraćem mogućem roku.
+            <p style="padding-right: 20px" [innerHTML]="'TECH.TechDetails'|translate">
 
             </p>
           </div>
           <div class="right">
-            <h3>PRESECI ZIDOVA</h3>
+            <h3>{{'TECH.wallSection'|translate}}</h3>
             <mat-tab-group>
               <mat-tab label="Klasik">
                 <img src="../../../../assets/images/presekzida.png">

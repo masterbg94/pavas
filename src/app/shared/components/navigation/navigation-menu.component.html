@@ -1,4 +1,3 @@
-
 <div id="header">
   <div class="header-search">
     <div class="content">
@@ -9,7 +8,7 @@
       </div>
       <div class="search">
         <div class="right">
-          <!--<div class="language-selector"
+          <div class="language-selector"
                ngbDropdown
             #myDrop="ngbDropdown"
                aria-expanded=false
@@ -21,7 +20,7 @@
                style="cursor: pointer;user-select: none;display: flex">
 
               <img class="flag" src="{{currentLanguage.flag}}">
-              <div class="label">{{currentLanguage.label}}</div>
+              <div class="label">{{currentLanguage.label | translate}}</div>
             </a>
 
             <div ngbDropdownMenu
@@ -34,10 +33,10 @@
                 (click)="setLanguage(language)">
 
                 <img class="flag" [src]="language.flag">
-                {{language.label}}
+                {{language.label | translate}}
               </button>
             </div>
-          </div>-->
+          </div>
 
           <div class="social">
             <div class="circle f">
@@ -69,11 +68,10 @@
             [routerLinkActive]="['active-link']"
             [routerLink]="nav.router"
             [routerLinkActiveOptions]= "{exact:true}">
-            {{nav.name}}
+            {{nav.name | translate | uppercase}}
           </li>
         </ul>
       </div>
     </div>
   </div>
-
 </div>

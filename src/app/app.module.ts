@@ -1,14 +1,21 @@
- import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from 'src/app/app-routing.module';
+
 import { HomeModule } from 'src/app/modules/home/home.module';
 import { FooterModule } from 'src/app/shared/components/footer/footer.module';
 import { NavigationMenuModule } from 'src/app/shared/components/navigation/navigation-menu.module';
 import { ObjectsService } from 'src/app/shared/services/object.service';
-
 import { AppComponent } from './app.component';
+// translate
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+
+export function TranslationLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -26,8 +33,15 @@ import { AppComponent } from './app.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader, useFactory: TranslationLoaderFactory, deps: [HttpClient],
+      },
+    }),
+    HttpClientModule,
   ],
   providers: [ObjectsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

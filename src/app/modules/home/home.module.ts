@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material';
+import { TranslateModule } from '@ngx-translate/core';
 import { CarouselModule } from 'ngx-bootstrap';
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module';
 import { HomeComponent } from 'src/app/modules/home/pages/home.component';
@@ -14,7 +15,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   threshold: 50,
   spaceBetween: 5,
   slidesPerView: 1,
-  centeredSlides: true
+  centeredSlides: true,
 };
 
 @NgModule({
@@ -24,16 +25,18 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     CarouselModule.forRoot(),
     MatButtonModule,
     SwiperModule,
+    TranslateModule,
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,
   ],
   exports: [],
   providers: [
     {
       provide: SWIPER_CONFIG,
-      useValue: DEFAULT_SWIPER_CONFIG
-    }
-  ]
+      useValue: DEFAULT_SWIPER_CONFIG,
+    },
+  ],
 })
-export class HomeModule {}
+export class HomeModule {
+}

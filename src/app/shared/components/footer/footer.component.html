@@ -5,31 +5,31 @@
   <div class="content">
     <div class="footer-left">
       <ul class="agent">
-        <h3>Kompanija Dom</h3>
+        <h3>{{'FOOTER.company'|translate}} Dom</h3>
         <li *ngFor="let menu of agentMenu" [routerLink]="menu.router">
-          {{menu.name}}
+          {{menu.name|translate}}
         </li>
       </ul>
       <ul class="nekretnine">
-        <h3>Socijalne Mreze</h3>
-        <li *ngFor="let menu of nekretnine" [routerLink]="menu.router">
-          {{menu.name}}
+        <h3>{{'FOOTER.social'|translate}}</h3>
+        <li *ngFor="let menu of nekretnine">
+          <a href="{{menu.router}}" target="_blank" style="color:white">{{menu.name}}</a>
         </li>
       </ul>
       <ul class="linkovi">
-        <h3>Korisni Linkovi</h3>
+        <h3>{{'FOOTER.usefulLinks'|translate}}</h3>
         <li *ngFor="let menu of linkovi" [routerLink]="menu.router">
-          {{menu.name}}
+          {{menu.name|translate}}
         </li>
       </ul>
       <div class="contact">
-        <h3>Kontakt</h3>
+        <h3>{{'MENU.contact'|translate}}</h3>
         <div class="info">
           <p>
-            Telefon 1: 381 64 923 04 07
+            {{'phone'|translate}} 1: 381 64 923 04 07
           </p>
           <p>
-            Telefon 2: 381 66 64 04 110
+            {{'phone'|translate}} 2: 381 66 64 04 110
           </p>
           <p>
             Email: montaznekucedom@gmail.com
@@ -51,13 +51,13 @@
     <div class="footer-right">
       <div class="encription">
         <div class="time">
-          <h3>Radno Vreme</h3>
+          <h3>{{'FOOTER.workHrs'|translate}}</h3>
           <div class="info">
             <p>
-              Radnim danima: 08-17h
+              {{'FOOTER.wrkDays'|translate}}: 08-17h
             </p>
             <p>
-              Subota: 8-15h
+              {{'FOOTER.saturday'|translate}}: 8-15h
             </p>
         </div>
         </div>
@@ -67,8 +67,7 @@
   </div>
   <div class="copy">
     <div class="content" style="padding: 0">
-      <span>Dom D.O.O © 2018 Sva prava zasticena</span>
-      <span>Powered by Limit Consolidated</span>
+      <span>Dom D.O.O © 2022 {{'FOOTER.rights'|translate}}</span>
     </div>
   </div>
 </div>

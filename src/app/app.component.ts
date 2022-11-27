@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material';
 import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -59,7 +60,11 @@ export class AppComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private translateService: TranslateService) {
+    translateService.addLangs(['sr', 'en']);
+    translateService.setDefaultLang('sr');
+    translateService.use('sr');
+  }
 
   public ngOnInit(): void {
     this.innerWidth = window.innerWidth;

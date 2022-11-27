@@ -7,57 +7,57 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   agentMenu = [
-	{
-	name: 'Naslovna',
-	router: '',
-	},
-	{
-	name: 'O nama',
-	router: '/aboutus',
-	},
-	{
-	name: 'Usluge',
-	router: '/services',
-	},
-	{
-		name: 'Galerija',
-	router: '/contact',
-	},
-  {
-  name: 'Tehnologija',
-   router: '/contact',
-  },
-  {
-  name: 'Kontakt',
-   router: '/contact',
-   },
+    {
+      name: 'MENU.home',
+      router: '',
+    },
+    {
+      name: 'MENU.aboutus',
+      router: '/aboutus',
+    },
+    {
+      name: 'MENU.services',
+      router: '/services',
+    },
+    {
+      name: 'MENU.gallery',
+      router: '/contact',
+    },
+    {
+      name: 'MENU.technology',
+      router: '/contact',
+    },
+    {
+      name: 'MENU.contact',
+      router: '/contact',
+    },
   ];
   nekretnine = [
-	{
-	name: 'Facebook',
-	router: '/',
-	},
-	{
-	name: 'Twitter',
-	router: '/',
-	},
-	{
-	name: 'Instagram',
-	router: '/',
-	},
-	{
-	name: 'YouTube',
-	router: '/',
-	},
+    {
+      name: 'Facebook',
+      router: '/',
+    },
+    {
+      name: 'Twitter',
+      router: '/',
+    },
+    {
+      name: 'Instagram',
+      router: 'https://www.instagram.com/montaznekucedom/',
+    },
+    {
+      name: 'YouTube',
+      router: '/',
+    },
   ];
   linkovi = [
-	{
-	name: 'Politika privatnosti',
-	 router: '/privacypolicy',
-	},
-	{
-		name: 'Pravila koriscenja',
-	router: '/termsofuse',
-	},
+    {
+      name: 'FOOTER.privacy',
+      router: '/privacypolicy',
+    },
+    {
+      name: 'FOOTER.terms',
+      router: '/termsofuse',
+    },
   ];
 }

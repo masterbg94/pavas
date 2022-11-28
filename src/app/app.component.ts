@@ -19,46 +19,75 @@ export class AppComponent implements OnInit {
 
   menu = [
     {
-      name: 'NASLOVNA',
+      name: 'MENU.home',
       router: '',
       icon: 'fas fa-home',
     },
     {
-      name: 'O NAMA',
+      name: 'MENU.aboutus',
       router: 'aboutus',
       icon: 'fas fa-building',
     },
     {
-      name: 'USLUGE',
+      name: 'MENU.services',
       router: 'services',
       icon: 'fas fa-shopping-bag',
     },
     {
-      name: 'TIPSKI OBJEKTI',
+      name: 'MENU.objects',
       router: 'objects',
       icon: 'fab fa-houzz',
     },
     {
-      name: 'DODATNI PROIZVODI',
+      name: 'MENU.products',
       router: 'products',
       icon: 'fab fa-houzz',
     },
     {
-      name: 'GALERIJA',
+      name: 'MENU.gallery',
       router: 'gallery',
       icon: 'fas fa-camera',
     },
     {
-      name: 'TEHNOLOGIJE I SISTEMI GRADNJE',
+      name: 'MENU.technology',
       router: 'tehnology',
       icon: 'fas fa-sitemap',
     },
     {
-      name: 'KONTAKT',
+      name: 'MENU.contact',
       router: 'contact',
       icon: 'fas fa-map-marked',
     },
   ];
+
+  public navbarCollapsed: boolean;
+  public availableLanguages: any[] = [
+    {
+      label: 'serbian',
+      code: 'rs-RS',
+      value: 'sr',
+      flag: '../../../../assets/images/serbian.png'
+    },
+    // {
+    //   label: 'Slovenian',
+    //   code: 'sl-SL',
+    //   value: 'sl',
+    //   flag: '../../../../assets/images/slovenian.png'
+    // },
+    {
+      label: 'english',
+      code: 'en-US',
+      value: 'en',
+      flag: '../../../../assets/images/usflag.png'
+    },
+    // {
+    //   label: 'Deutsch',
+    //   code: 'de-DE',
+    //   value: 'de',
+    //   flag: '../../../../assets/images/germanflag.png'
+    // }
+  ];
+  currentLanguage = this.availableLanguages[0];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private translateService: TranslateService) {
     translateService.addLangs(['sr', 'en']);
@@ -86,6 +115,7 @@ export class AppComponent implements OnInit {
   public onResize(): void {
     this.innerWidth = window.innerWidth;
   }
+
   public getTitle = (snapshot: ActivatedRouteSnapshot): string => {
     if (!!snapshot && !!snapshot.children && !!snapshot.children.length) {
       return this.getTitle(snapshot.children[0]);
@@ -96,4 +126,8 @@ export class AppComponent implements OnInit {
     }
   }
 
+  public setLanguage(language: any) {
+    this.currentLanguage = language;
+    this.translateService.use(language.value);
+  }
 }

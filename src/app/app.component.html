@@ -18,12 +18,43 @@
              [routerLinkActiveOptions]="{exact:true}"
              (click)="drawer.toggle()"
         >
-          <span><i class="{{m.icon}}"></i> {{m.name}}</span>
+          <span><i class="{{m.icon}}"></i> {{m.name|translate|uppercase}}</span>
         </div>
       </div>
     </mat-nav-list>
 
     <div class="copyright">
+      <div class="language-mobile">
+        <div class="language-selector"
+             ngbDropdown
+             #myDrop="ngbDropdown"
+             aria-expanded=false
+             [routerLinkActive]="['active']">
+
+          <a class="nav-link"
+             role="button"
+             ngbDropdownToggle
+             style="cursor: pointer;user-select: none;display: flex">
+
+            <img class="flag" src="{{currentLanguage.flag}}">
+            <div class="label">{{currentLanguage.label | translate}}</div>
+          </a>
+
+          <div ngbDropdownMenu
+               class="dropdown-menu show"
+               aria-labelledby="dropdownManual"
+               (click)="navbarCollapsed = false">
+
+            <button class="dropdown-item"
+                    *ngFor="let language of availableLanguages"
+                    (click)="setLanguage(language)">
+
+              <img class="flag" [src]="language.flag">
+              {{language.label | translate}}
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="social">
         <div class="circle f">
           <i class="fab fa-facebook-f"></i>
@@ -38,7 +69,7 @@
         </div>
       </div>
       <div class="copy">Copyright by Dom D.O.O 2019</div>
-      <div class="copy" style="padding-bottom: 20px">Powered By Limit Consolidated</div>
+<!--      <div class="copy" style="padding-bottom: 20px">Powered By Limit Consolidated</div>-->
     </div>
   </mat-drawer>
 

@@ -126,7 +126,11 @@
   "TECH": {
     "tab1": "TECHNOLOGY AND SYSTEMS WITH WALL SECTIONS",
     "TechDetails": "The company Dom doo has perfected technology for the production of prefabricated buildings.<br> Each step of production is specially developed and monitored by our expert team. The beginning of every prefabricated house is the selection of quality materials.<br><br>Thanks to our own capacities, our verified suppliers and dryers for drying wood, we have excellent insight into the quality and moisture (dryness) of the wood we use.<br><br>After drying the wood, further wood processing is carried out in the production part of our company according to the necessary measures and specifications of the materials for your home.<br><br>After assembly and production, the elements are transported to the construction site and assembly of the building begins. After the assembly is completed, all other works required on the building are carried out.<br><br>What we are especially proud of is the fact that the company Dom doo is a direct manufacturer of prefabricated buildings with its own warehouse and production capacities. With a constant stock of over 100m³ of quality dry timber and other materials, we guarantee that we can start building your house in the shortest possible time.",
-    "wallSection": "Wall sections"
+    "wallSection": "Wall sections",
+    "ukupnaDebljina": "Total thickness",
+    "sviElementi": "All elements of the walls can be adjusted according to the possibilities, wishes and requirements of the investor.",
+    "silikatna": "Silicate",
+    "fasada": "facade"
   }
 }
 

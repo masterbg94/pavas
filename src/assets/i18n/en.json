@@ -131,6 +131,22 @@
     "sviElementi": "All elements of the walls can be adjusted according to the possibilities, wishes and requirements of the investor.",
     "silikatna": "Silicate",
     "fasada": "facade"
+  },
+  "CONTACT": {
+    "header": "Let's get in touch",
+    "headerTxt": "We have one goal together... Let's find your ideal place, share with us your interest and we will do our best to find you the desired objects as soon as possible.",
+    "contactUs": "Contact us with form",
+    "pleaseEnterYour": "Please enter your ",
+    "name": "first name",
+    "lastName": "last name",
+    "emptyMsg": "Message cant be empty",
+    "contactInfo": "Contact info",
+    "agree1": "With pressing send button you agree with our ",
+    "agree2": " and with ",
+    "agree3": " and you allow us to save your data that you send in the contact form for the purpose of making contact.",
+    "seeGallery": "VIEW GALLERY",
+    "tos": "Terms Of Service",
+    "policy": "Privacy policy "
   }
 }
 

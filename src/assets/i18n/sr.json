@@ -131,5 +131,21 @@
     "sviElementi": "Svi elementi zidova se mogu korigovati prema mogućnostima, željama I zahtevima investitora.",
     "silikatna": "Silikatna",
     "fasada": "fasada"
+  },
+  "CONTACT": {
+    "header": "Stupimo u kontakt",
+    "headerTxt": "Zajedno imamo jedan jedini cilj… Pronadimo vase idealno mesto, podelite sa nama vase interesovanje a mi cemo se potruditi da vam sto pre pronadjemo zeljene objekte.",
+    "contactUs": "Kontaktirajte nas putem poruke",
+    "pleaseEnterYour": "Molimo unesite vase ",
+    "name": "ime",
+    "lastName": "prezime",
+    "emptyMsg": "Poruka ne sme biti praznog sadrzaja",
+    "contactInfo": "Kontakt informacije",
+    "agree1": "Klikom na dugme ‚posalji‘ slazete se sa nasim ",
+    "agree2": " kao i sa ",
+    "agree3": " i dozvoljavate da vase podatke koje prosledujete u kontakt formi mozemo sacuvati radi ostvarivanja kontakta.",
+    "seeGallery": "POGLEDAJTE GALERIJU",
+    "tos": "pravilima i uslovima koriscenja",
+    "policy": "pravilima privatnosti "
   }
 }

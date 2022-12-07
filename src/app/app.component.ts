@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  @ViewChild('drawer') drawer: MatDrawer;
+  @ViewChild('drawer', {static: false}) drawer: MatDrawer;
   innerWidth: number;
   name: string;
   collapsed: false;

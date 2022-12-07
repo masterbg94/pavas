@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
-import { CarouselModule } from 'ngx-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module';
 import { HomeComponent } from 'src/app/modules/home/pages/home.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';

@@ -63,8 +63,8 @@ export class HomeComponent {
     hideOnClick: false
   };
 
-  @ViewChild(SwiperComponent) componentRef: SwiperComponent;
-  @ViewChild(SwiperDirective) directiveRef: SwiperDirective;
+  @ViewChild(SwiperComponent, {static: false}) componentRef: SwiperComponent;
+  @ViewChild(SwiperDirective, {static: false}) directiveRef: SwiperDirective;
 
   constructor() {}
 

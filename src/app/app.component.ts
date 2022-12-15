@@ -1,12 +1,14 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'app';
@@ -66,7 +68,7 @@ export class AppComponent implements OnInit {
       label: 'serbian',
       code: 'rs-RS',
       value: 'sr',
-      flag: '../../../../assets/images/serbian.png'
+      flag: '../../../../assets/images/serbian.png',
     },
     // {
     //   label: 'Slovenian',
@@ -78,7 +80,7 @@ export class AppComponent implements OnInit {
       label: 'english',
       code: 'en-US',
       value: 'en',
-      flag: '../../../../assets/images/usflag.png'
+      flag: '../../../../assets/images/usflag.png',
     },
     // {
     //   label: 'Deutsch',
@@ -89,7 +91,12 @@ export class AppComponent implements OnInit {
   ];
   currentLanguage = this.availableLanguages[0];
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private translateService: TranslateService) {
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private translateService: TranslateService,
+    private titleService: Title
+  ) {
     translateService.addLangs(['sr', 'en']);
     translateService.setDefaultLang('sr');
     translateService.use('sr');
@@ -108,6 +115,17 @@ export class AppComponent implements OnInit {
           }
         }
       }
+    });
+    // this.modalService.open(SaleModalComponent, {centered: true, size: 'lg'});
+    //    Router title
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    ).subscribe(() => {
+      // If route module have child than it read child [data:{title:'any'}]
+      const childRoute = this.getChild(this.activatedRoute);
+      childRoute.data.subscribe(data => {
+        this.titleService.setTitle(data.title);
+      });
     });
   }
 
@@ -129,5 +147,14 @@ export class AppComponent implements OnInit {
   public setLanguage(language: any) {
     this.currentLanguage = language;
     this.translateService.use(language.value);
+  }
+
+  // If route module have child than it read child [data:{title:'any'}]
+  getChild(activatedRoute: ActivatedRoute) {
+    if (activatedRoute.firstChild) {
+      return this.getChild(activatedRoute.firstChild);
+    } else {
+      return activatedRoute;
+    }
   }
 }

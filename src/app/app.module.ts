@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function TranslationLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -41,6 +43,7 @@ export function TranslationLoaderFactory(http: HttpClient) {
         }),
         HttpClientModule,
         NgbDropdownModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ],
   providers: [ObjectsService],
   bootstrap: [AppComponent],
